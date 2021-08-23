@@ -157,533 +157,661 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>MAD教程第0期（笔记合集）<br>    补：各格式对章节标记的支持情况（挖坑于2019.10.20）<br>    更新日志<br>    <strong>最近更新：<strong>2021.5.11</strong>，时隔两年开始大修第0期笔记，补支醉新教程+记笔记，第0.5 1 2期的在路上了0v0</strong><br>    <strong><del>尝试在支醉更新第3期前彻底消化掉前几期</del></strong><br>        2019.9.15  SP.1《优秀压制组字幕组推荐》<br>    黄色背景条目为本人根据其他资料对支醉教程相关部分进行的增补/修改，不定期更新<br>    蓝色背景条目为本人私货，不定期更新<br>    一些常见的图片格式（挖坑于2019.1.27）<br>    找资源·格式编码：浅谈视频格式及其编码<br>        1. AVI编码建议使用Xvid（采用早期MPEG-4标准），比其他编码的体积小很多<br>        2. MP4<br>             MPEG-4（MPEG第四部分），Moving Picture Experts Group:动态图像专家组(即该标准的制定者)<br>        3. MP3：MPEG-1 Audio Layer 3（MPEG第一部分第三层）<br>        4. H.264<br>             又名：MPEG-4 Part 10（MPEG第四标准第10部分）<br>             简称为：MPEG4 P10<br>             又名：AVC，Advanced Video Coding，高级视频编码（H.264由两个视频专家组合作提出，所以在MPEG里称作H.264，另一组织里称作AVC）<br>             合体名称：H.264/MPEG-4 AVC<br>             H.264的FourCC，四字符代码（four character code）(可以理解为该编码的一种算法)：x264(开源)/AVC1/H264(商用)（注意，不带点）</p>
-<pre><code>    5. MPEG家族：
-       官网：https://mpeg.chiariglione.org
-         MPEG-1：VCD标准：常见格式有DAT，MPG
-         MPEG-2：DVD标准：VOB格式
-         MPEG-3：夭折
-         MPEG-4：MP4
-         MPEG-7
-         MPEG-21
-         ……
-    6. Profile，Level，H.264下一般选High5.1
-    7. H.265：HEVC，High Efficiency Video Coding,
-         合体名：HEVC/H.265
-         
-    8. MKV：可以封入16条音轨，字幕轨无限制
-         （MP4也能封装字幕，但不能封装音频轨和视频轨）
-         
-    9. MOV：苹果公司开发，特点是可以带透明通道
-    10. F4V：FLV+H.264，可以直接改后缀名为flv
-    11. HLV：FLV+H.263
-    12. 若缺编码，可以下载两个东西：
-          完美解码
-          K-litemega codec pack
-          
-找资源·其他相关：难以归类的各种杂项
-    OVA：Original Video Animation
-    OAD：Original Video DVD，一般捆绑漫画发售
-    （共同点：都没在电视上放）
-    算法
-        CRC32（Cyclic Redundancy Check/Code）,循环冗余检查/码，32bit，即8位十六进制
-        MD5（散列值），128bit
-        SHA-1，散列值160位
-        
-    种子
-        P2P：Peer to Peer
-        ed2k：eDonkey2000，电驴
-        ed2k下载地址形式：ed2k://|file|&lt;文件名称&gt;|&lt;文件大小&gt;|&lt;文件哈希值&gt;|/
-        BT下载地址形式：magnet:?xt=urn:btih:hash值（xt:exact topic）（urn：Uniform Resource Name）（btih: BitTorrent Info Hash）（哈希值一般40位）
-        类似的：md5:md5值；ed2k:eD2khash值；sha1:SHA-1 hash值
-        磁链和种子文件互转：btspread
-    大佬们推荐的种子（磁链）下载器列表
-    （数了数几十个pt站巨佬的客户端标识后统计出来的
-    （待补全
-    （排名分先后
-        qBittorrent
-        （开源，免费无广告
-        （还有一个enhanced版本，专治吸血雷
-        μtorrent
-        rtorrent
-        Transmission
-        FDM
-        **例外**
-            迅雷：在试过上述客户端并且添加许多tracker之后仍无效，万策尽的时候可以试一下，但强烈建议不要作为主要下载器
-        附：[个人随便找的一些能用的tracker](https://dynalist.io/d/y6qtODDT3Lw3uTgCpkO1y_qI)（2019年初亲测能用）
-找资源·生肉之旅：各片源版本及其异同
-    名词
-    找资源时，番剧名后面冗长的一大串英文+数字信息
-        raw：生肉，无字幕
-        BD：Blue-ray Disk，蓝光盘
-        Rip：“碟片→硬盘”这一过程；“原盘→压制”
-        滥用：也指对别人压制过的进行再压制
-        caption：字幕
-        Vol.：Volume，分卷
-        BIG-5：台湾香港地区通行的繁体字编码方案
-        GB：国标
-            GB2312：相当于简体标准字库
-        YUV：颜色编码方案
-        MX：Tokyo MX，电视台播出的TV版片源
-        10bit：位深，表示图像的色彩采样率，与“色深”的概念不同
-        其他不认识的英文单词：多半是压制组/字幕组名字，笔记最后一部分有提及
-    片源
-        1. 主要分为三类：TV，DVD，BD
-        2. 近几年网络配信开始普及，使用网络平台发布的视频进行压制叫webRip，常见于现在大多数新番字幕/压制组的发布，收藏价值小于BDrip（详见SP.1《优秀压制组字幕组推荐》）
-        3. TV版：画面会出现台标，时间等
-             关于TV画面上的“保护视力”字幕：“3D龙事件”
-                易诱发癫痫的条件：暗屋，大视角(大屏幕或靠太近)，高亮度
-                相关视频：“伦敦奥运会宣传片引发癫痫叫停”，“暮光之城：破晓”
-        4. TV版有时会出现圣光/暗牧（显示赞助商的免费电视台），收费电视台一般无和谐
-        5. DVD：一般老片源才要去找DVD
-             例外，比如2018年10月番《书店里的骷髅店员本田》就只发售DVD不卖BD~~ 残念跌丝袜 ~~，顺便安利一下这部画风清奇的番
-        6. BD：
-             画质最高
-             可能会有内容修正
-             一般无圣光暗牧
-             附特典，评论音轨
-             BD通常每月发售一卷，每卷含几集到十几集不等
-        7. BDMV：蓝光原盘，目录结构见下
-        8. BDremux：使用BDMV的视频流，音频流进行混流得到，所以和BDMV的画质/音质一样，但只有正片，无花絮等杂项
-        9. ISO：DVD的镜像文件（用虚拟光驱加载，或解压软件解压）
-        10. アニメ：anime，特指日本动画
-        11. BD-Box，全集
-              一般老番出BD直接出全集
-        12. BDMV目录结构：
-            包含两个子目录：**BDMV**和**CERTIFICATE**
-              **BDMV**文件夹
-                1. **STREAM**文件夹：蓝光视频
-                     **m2ts**文件
-                        一般来说，m2ts后缀就是蓝光视频文件
-                        可直接播放
-                        有些不能播放的，多是菜单按钮等信息
-                        非编软件一般可以直接导入（常见的还有ts格式）
-                2. **PLAYLIST**文件夹
-                     **mpls**（mediaplaylist）文件
-                        是蓝光的播放列表信息
-                        内有一个或多个播放项目(playitem)
-                        多半可以被播放器直接播放
-                        储存有蓝光的章节信息，可以在播放器中被显示
-                3. **CLIPINF**文件夹
-                     **clpi**（clip-info）文件
-                        存储有视频信息：
-                            编码方式
-                            视频长度
-                            音轨数量
-                            其他属性和时间信息
-                        每一个视频流（m2ts）文件必须对应一个clpi文件
-                4. **META**文件夹
-                   （meta-information元信息）
-                     **DL**文件夹
-                        **xml**文件：记录logo相关信息
-                        图片：蓝光的logo
-                        但由于是在电脑上放，所以上述这两种文件没用
-                5. **index.bdmv**：存储原盘目录信息
-                6. **movieobject.bdmv**：存储播放命令
-                     包含一个可执行的导航命令程序
-              **CERTIFICATE**文件夹
-                **id.bdmv**：正版证明
-        13. スペシャル：Special，即SP
-        14. 特典：附加内容，图片，声音，视频
-              可能是见面会，访谈录，NCOP，NCED等其他项目
-        15. NCOP/ED：无“制作，监督，声优”等字幕
-              NC
-                Non-Credit Opening/Ending
-                ノンクレジットオープニング，ノンクレジットエンディング
-                无字片头/片尾（“字”指人员名单）
-                staff：制作人员
-                credit：参与人员
-              去国外网站搜NCOP/ED时还要搜“creditless”。
-              再搜不到只能去YouTube的时候搜“textless”。
-              有些视频名字里有“ノンテロップ”（Non Telop，telop：television opaque projector的缩略，大意指图片，字幕等）
-              NCOP Vol.1一般第一卷就有了。
-        16. ep：Episode，集
-        17. 重制版：大部分情况下说的都不是重新制作，而是数码重制（若重制后播出，则是数码重映）(Digital remaster(ed))
-        18. 导演剪辑版（Director&#39;s Cut，ディレクターズ・カット）
-              相当于加长版，多了一些内容
-              导演和制片人意见不合时产生
-              制片人偏商业性，导演偏艺术性
-        19. OA：On The Air，电视上播出的版本
-        20. Renewal版（Renew版）：相当于数码重制+导演剪辑
-        21. Special Edition：特殊版本
-    EXTRA:
-        1. “3D龙”事件
-        2. PS3游戏《凉宫春日的追忆》的特典，有God Knows演唱会3D版（av16931681）
-        3. 俺妹,每个OP都不一样
-        4. 家有色邻，OP区别只在一开始的画面
-        5. 2011版全职猎人，只有NCOP3和ED2
-        6. 好想告诉你，DVD有NCOP/ED，BD没有
-        7. 有些番一开始的OP/ED制作就融入了Credit。例：A Channel，黑礁，星际牛仔没有NC
-        8. 死神每个OP的分镜，版式设计和配色都非常出彩（OP13没有NC）
-        9. 火影OP9没有NC
-        10. 穿透幻影的太阳，DVD才有NCOP/ED
-        11. 铃音，DVD和BD版NCOP不一样：DVD版（和TV版）前面有一段话
-        12. 百花缭乱 NCOP/ED有墨汁版和无墨汁版
-        13. 名侦探柯南 NCOP20/21右下角水印
-        14. 伊克西翁传说DT 的OP带有歌词字幕
-        15. 海贼王 富士电视台重制版本（Special Edition）ep9，画质提升但是上下画面被砍
-             
-找资源·视频基础：浅谈视频各常见名词
-    1. 像素
-         像素(pixel)全称图像元素，pixel element，pix是picture的俚语，故简化为pixel，作单位时写作px。
-         垂直像素点有720行叫做720p，1080p，2160p同理，没有规定横向像素点数量
-         长宽比：aspect ratio
-            16:9，4:3是电视行业的标准
-            带小数点的1.78:1，1.33:1是电影行业的称呼方式
-         长宽比的来历见视频P1 33:23
-         摄像机 ≠ 摄影机
-         前者电子磁记录，后者光化学记录
-         4:3屏幕播放其他比例的视频时的放大方式
-            1. Pan&amp;Scan：直接按短边等比例放大塞满画面，这会导致长边被裁切
-            2. Letterbox 信箱：上下加黑边，但现在黑边作为电影电视争斗产物也改变了大众审美，有黑边才有电影感
-               现在习惯用“黑边”了
-            3. Pillarbox 邮筒：左右加黑边
-            4. Windowbox 窗盒：四周都有黑边
-         **SD**（Standard Definition）（480p）标清：640*480
-         **HD**（High Definition）（720p）高清：1280*720
-         **FHD**（Full HD）（1080p）全高清：1920*1080
-         **QHD**（Quad HD）（2K）（1440p）：2560*1440
-         分辨率为HD（1280*720）的四倍（Quad）
-         又名：**WQHD**（Wide Quad HD）
-         **4K UHD**（Ultra HD）超高清：3840*2160
-         又名：**QFHD** (Quad Full HD)
-         **8K UHD**：7680*4320
-         其他（也许会见到的）分辨率
-         参考资料：https://en.wikipedia.org/wiki/Graphics_display_resolution
-            计算机图形
-                **HD+**：1600*900
-                **DCI 4K** / **Cinema 4K**：4096*2160
-                **5K** / **UHD+**：5120*2880
-            数字电视标准
-                **VCD**（Video CD）：
-</code></pre>
-<p>352<em>240（NTSC）<br>352</em>288（PAL）<br>                    <strong>DVD</strong>：<br>720<em>480（NTSC）<br>720</em>576（PAL）<br>             <strong>补充</strong><br>                高分辨率的“K”数一般看水平分辨率的近似，比如3840和4096都算4k，5120就是5k，6k等以此类推<br>                <del>那1080p = 1920*1080 ≈ 2k了（大雾</del><br>        2. HDTV标准<br>             关于HDTV标准16:9的由来（该标准从1972年开始制定，1983年终于制定完成）：<br>                TV：1.33:1<br>                欧洲宽银幕：1.66:1<br>                英美宽银幕：1.85:1<br>                70mm胶片：2.2:1<br>                CinemaScope：2.35:1<br>             HDTV标准即是将这些主流标准叠加，最内侧的框和最外侧的框（比例相等）为16:9，1.78:1。<br>             16:10是最接近美学上的“黄金分割”<br>             16:9是最接近成本上的“黄金分割”</p>
-<pre><code>    3. 帧
-         帧：frame，画框，边框
-            随胶片的出现而产生，每一格就是一帧
-            静态画面变成动态影像，最低限制是每秒播放8格，比较流畅需要达到12.
-         帧速率简称帧率，**F**rame **P**er **S**econd，每秒钟一帧出现的频率
-         视频的帧率模式有两种，CFR和VFR
-            **C**onstant **F**rame **R**ate，恒定帧率，顾名思义，全程帧率不变，这也是现在绝大多数视频采用的模式
-            **V**ariable **F**rame **R**ate，可变帧率，在视频的不同时间点可能会有不同的帧率。由于目前并不能带来多大的视频压缩率提升，并且其对兼容性有较高要求，VFR视频极其稀少
-         播放电影时常用叶片快门来达到闪烁效果。叶片快门内是类似于马耳他十字芯的结构
-         视觉暂留现象：由于视神经的惰性，人眼接收光脉冲时，出现，渐上，持平，缓慢消失(0.1~0.4s)
-         人眼能看出在动：
-            临界频率 8Hz
-            比较流畅 12Hz
-         人眼觉得不闪：
-            临界闪烁频率为 45.8Hz
-            人眼视觉极限 58Hz
-            随着显示器亮度的增加，这一极限将会增加至 60-70Hz
-         动画张数相关
-            某些动画或某些镜头是按一拍一画的，即每帧都有一幅画面（区别于一拍二或一拍三，即两/三帧一张画）。中间画的张数多了，所以会感觉流畅。此时可以称为“高张数”
-            为平衡成本和流畅度，现在绝大多数动画普遍采用一拍二或一拍三，此时张数较低，会出现视频的每两/三帧为同一画面的情况。但此时的视频帧数是不变的，看起来卡顿是因为动画作画的张数低，而不是视频的帧数低
-            某获得BC2013第二名的作品 **Into Rhe Labyrinth**（物语节奏型AMV），其流畅的画面为使用AE插件进行补帧得到的效果，此时可以称之为“高帧”
-            想了解更多动画张数相关知识可以看[Anitama的这期视频：av49484471](https://www.bilibili.com/video/av49484471)
-         相同FPS下 为什么游戏看起来比电影电视要卡
-            1. 游戏是显卡实时渲染，渲染不同帧所需时间不等
-            2. 游戏没有开动态模糊，导致相邻帧之间的过渡生硬，通过人眼视觉暂留现象放大。
-            3. 即使开了动态模糊，那也只是通过对显卡渲染出的一张图片进行后处理来逼近电影的视觉效果，信息量相比渲染前的只减不增，远远比不过拍摄电影的真实感
-    4. 场
-         电视制式主要有三种，NTSC，PAL，SECAM。NTSC的交流电频率是60Hz，PAL是50Hz
-         NTSC：**N**ational **T**elevision **S**tandards **C**ommittee (美国)国家电视标准委员会
-         PAL：**P**hase **A**lternating **L**ine 逐行倒相
-         扫描方式有隔行扫描（i，interlaced）和逐行扫描（p，progressive）。逐行扫描是现在最普遍的显示方式，即为“720p”中的“p”，“i”同理。
-         P制，一幅画面扫两次，这两i的画面被称为“场”，50/2=25fps
-         N制，一幅画面扫两次，为了保证彩色而降频，60场变成60-60*1/1000=59.94场=29.97fps
-         隔行扫描的i除了能加在垂直分辨率上（1080i）和场频上（50i）还能加到电视线上，比如525i，625i
-         隔行扫描中，如果相邻的场在前期拍摄时就是交错的，无法完美地合在一起，那么当用逐行扫描的显示器直接播放隔行扫描的视频会出现拉丝，解决办法是去交错（deinterlacing）
-            去交错的算法有很多，速度和质量上各有优劣，但都不是无损的
-         若视频在拍摄时是逐行扫描，之后经过3:2 pull down等方法转换成了隔行扫描，则可通过反交错（Inverse Telecine，IVTC）将隔行扫描视频几乎无损的还原成逐行扫描
-            现在显示器/播放器一般自带反交错功能，但有些视频，比如3-2pull down，还是需要自己手动反交错）
-         注：简单的去交错及反交错可以用免费视频压制软件“Handbrake”处理，而较复杂的则常用MeGUI + AviSynth/VapourSynth脚本，有相关需求者可以点下这个方向的技能点。推荐国内压制技术论坛：nmm-hd
-         N制对电影的匹配：3-2Pull Down/3:2下位变换/下拉变换/帧频转换：四帧共分为8个场（1奇1偶  2奇2偶  3奇3偶  4奇4偶），在变换的时候变成：1奇1偶  2奇2偶  2奇3偶  3奇4偶  4奇4偶.其中第三，四帧会出现交错鬼影（interlacing artifacts）(同时出现两个画面)
-         P制对电影的匹配：由于P制25fps，电影24，P制就把电影中一秒内的某一帧重复一次。
-            N制24fps电影转换为P制25fps时，若先看到13帧正常图像，接着12帧交错图像，这是Euro pulldown
-         为了确保彩色信号而降频的N制 加上 3-2Pull Down：4/5==x/29.97，x=23.976
-         像素的形状是正方形，那时P制768*576，N制640*480，现在统一了，但出现了1:1.067（P制）和1:0.889（N制）。
-            PS：支醉视频这里放的那个长方形像素长宽比不是1:1.067，更像是1:1.67_(:3」∠)_
-            __~~支醉：夸张手法，夸张手法懂不懂，一切为演出效果服务.gif~~__
-    5. 码率
-         码率，意为每秒的数据量
-         又叫：Bit Rate 比特率 / Data Rate 数据率
-            bit来源 Binary digit，二进制数字
-            比特率：单位时间内传输的数据位数。1个位数是1bit，8bit是1字节（Byte）
-            字节：一个英文字母/数字为1字节，一个汉字2字节
-         对于数据来说，1024字节为1KB，1024KB为1MB，1024MB=1GB，以此类推。但在存储介质的制造中，容量往往按照1000来换算，即：
-</code></pre>
-<p>我们购买的1TB硬盘，其容量为1,000,000,000,000 Byte，按照1:1024换算最终约为931.32GB<br>             码率越大，数据流越大，文件体积变大，音画质一般更好，网络缓冲更慢…<br>             常用单位<br>             注意大小写，可以这样记：1大写=8小写（1MB/s = 8Mbps）<br>                Mbps 和 Kbps ，常表示带宽<br>                Mbps (megabits per second) 兆/秒，Kbps (kilobits per second)<br>                KB/s：千字节每秒，常表示速率<br>             两种主要形式<br>                CBR：<strong>C</strong>onstant <strong>B</strong>it <strong>R</strong>ate，静态/固定码率<br>                VBR：<strong>V</strong>ariable <strong>B</strong>it <strong>R</strong>ate，动态/可变码率<br>        6. 其他<br>             a1080：1440:1080，在播放的时候拉伸为1440<em>1.333:1080，16:9。<br>             后黑：视频后面加一段黑屏，降低平均码率以保证画质<br>             文件大小≈总码率</em>时长/8（1字节Byte=8比特bit）</p>
-<pre><code>    7. 色深/位深
-       （这个深坑还没填完）
-       增补内容来源于 英文维基百科 / AE官方文档  / VCB-Studio教程，不保证准确性，以后阅读相关专业文献再做增补
-         注意。。。
-            支醉在这里貌似把位深和色深讲混了23333，我稍微修改下
-            补充……不仅仅是支醉，各路百科（包括中文维基），甚至中文圈的大部分都有种把它和其他概念混为一谈的感觉…
-            补充×2……“色深/位深”与“色彩位数”两节未修正完，最后更新：2019.4.1
-            补充×3，其实没什么，只是个中文翻译的混乱，用英文能100%避免这个问题
-         在计算机图形方面，色深（Color depth）和位深（Bit depth）一般指的是同一种东西：单独色彩通道的深度（也称为bpc，bit per channel，每通道精度）
-         由2的指数表示，比如：8bit, 10bit, 16bit，意味着一个通道占用8/10/16bit，有256/1024/65536种颜色
-         资源文件名中的Hi10p=10bit（profile=high）；Hi8p同理；Ma10p同理（profile=main）
-         关于支醉视频里提到的小电视飞天镜头8bit颜色过渡不自然，其实有另一种解决方法：使用抖动算法向视频内添加噪点。这样不仅可以达到媲美转换成10bit的色带抑制效果，还会保留8bit的兼容性
-            另外此处视频画面（p1，66:16）左边那个所谓的“8bit”个人猜测是为了说明这个意思而刻意夸大了（左边画面的色深应该只有5,6bit），实际8bit不可能有如此严重的色带。要知道B站所有视频都是8bit YUV，而在8bit YUV里是几乎看不到8bit RGB和16bit RGB的区别的（YUV和RGB的相关知识见下文“色彩空间”）
-         EXTRA：
-            目前AE可以使用最高32bpc浮点值的高动态范围颜色（high dynamic range color）
-            支醉在视频里提到“换成32bit之后就面目全非了”之后紧接着说到“32位真彩色”（p1，66:22）其实是有一定误导的：小电视换成32bit应该是指把色深换成32位浮点后，当时的AE可能不支持。但后面说的“32位真彩色”指的应该是下面这条，“色彩位数”
-    8. 色彩位数
-       （这个深坑还没填完）
-       增补内容来源于 英文维基百科 / AE官方文档 / VCB-Studio教程，不保证准确性，以后阅读相关专业文献再做增补
-         也称作每像素精度，bit per pixel，bpp
-         现在通常用于表示色彩空间的精度：比如液晶显示屏，以及RGB或YUV编码的视频
-            RGB16：早期windows“16色”，R/G/B通道分别为5/6/5bit
-            RGB24：“真彩色”，RGB各8bit
-            RGB32：“真彩色”，除了RGB各8bit，还有8bit是透明通道（Alpha channel）
-            RGB48：“全彩色”，RGB各16bit
-         EXTRA：
-            PNG
-                便携式网络图形格式Portable Network Graphics，支持透明度
-                PNG-8：使用索引颜色（Indexed color）
-                    在生成图片时计算机会筛选出至多256种RGB24颜色以及8bit透明度，并存进调色板（palette）中，用于整个图像的构建
-                    （挖坑于2019.3.31，PNG-8有两种模式，分别是indexed color和direct color，但平时见到的基本都是索引颜色模式）
-                PNG-24：RGB各8bit
-                    PNG-24没有透明通道
-                    Adobe的位图处理软件PhotoShop支持带透明通道的PNG-24，但实际上这是PNG-32
-                PNG-32，有RGBA四个8bit通道
-    9. 色彩空间
-       （这个深坑还没填完，最后更新2019.3.31）
-       增补内容来源于 英文维基百科 / Adobe官方文档 / VCB-Studio教程，不保证准确性，以后阅读相关专业文献再做增补
-       https://blog.csdn.net/tanningzhong/article/details/76690694
-         Color space，
-         RGB
-            
-         YUV
-            Y为亮度信号
-            U&amp;V：色差信号
-                U=B(蓝)-Y(黄)，记作chorma blue，Cb，蓝色色度
-                V=R(红)-Y(黄)，chorma red，Cr，红色色度
-            YUV经过缩放和偏移变成YCbCr
-            YUV420：Y全采样，U和V各取一个，在水平和垂直方向的两个连续采样点上完成的（其实应该叫411）
-            
-    10. Extra：
-          白熊咖啡厅（ED4，视觉暂留）
-          vcb-s搞过一个4k 120fps 10-bit AVC的高清病毒（超炮OP2），对电脑解码能力有信心的可以试着播放
-          mad吧精品贴，【重磅教程】60fpsAMV补帧真正的方法【完美破解】
-          刀剑神域2 OP1，原稿，短短几秒画了118张画
-          
-找资源·搜索相关
-    1. （资源站待补全）
-    2. 注意有些番的第一季第二季名称不一样，可以进官网查
-    3. batch：合集
-    4. v2v3：修复了两次/三次
-    5. rev：revision，修复版
-    6. jp2文件格式：Jpeg2000
-    7. 搜资源时搜不到记得留意评论
-    8. 有些番剧有版权问题，可以试试和谐名
-         黑子的篮球：影子球员
-         死亡笔记：可爱的小册子
-         缘分的天空：~~（咳咳咳我什么也不懂）~~
-         
-    9. raw：生肉
-    10. 番剧信息
-          bangumi
-          aniDB
-找资源·音频基础：浅谈音频各常见名词
-    1. 听阈，烦恼阈，疼痛阈
-    2. 声音=基音（音高）+泛音（音色）
-    3. 采样频率（sampling frequency）:
-         P制：44100=294*50*(6/2)
-         N制：44056=245*59.94*(6/2)
-         后统一为44100
-         
-    4. 关于音质
-         PCM编码的wav就是无损
-         音频编码常用AAC，其中苹果公司的qaac为公认的业界最优AAC编码器（虽然各aac编码器差距较小）
-         一些常见音频格式/编码器：（挖坑于2019.1.27，待填坑）
-         参考资料：https://magiclen.org/acoustics/
-    5. 立体声
-         2.0，只有两个主音箱
-         2.1，比2.0增加了一个低音炮（subwoofer），另外两个叫卫星箱
-         4.0/4.1，比2.0/2.1增加了一个前置音箱和后置音箱
-         5.1，左前置音箱(L)，右前置音箱(R)，左环绕音箱(LS)，右环绕音箱(RS)，中置音箱(C)，将人声分离
-         7.1，比5.1增加了两个后环绕箱
-         9.1，比7.1在主音箱上方增加了两个前主箱
-         10.2，在5.1的基础上两侧各增加侧向音箱，增加后中置音箱，在上方增加两个音箱，用于还原声场高度信号
-         ……
-         很多音箱/所有耳机都是2.0声道，在播放5.1声道，杜比环绕声或DTS环绕声时可能会出现只能听到L和R两个声道的情况，解决方法是在视频播放器/分离器里设置环绕声的downmix缩混
-    6. off vocal和instrumental的区别：前者一般指电子音，后者乐器
-        
-找资源·字幕相关：认识各类字幕及其他
-    1. CLOSED CAPTION，隐藏字幕（简称CC），美国1993年开始出产的电视机必备功能
-    2. Open Caption，常见于电影，不隐藏
-    3. caption和subtitle的区别：前者主要是原文，后者一般指翻译字幕
-    4. subtitle：分为硬字幕（内嵌字幕），软字幕（外挂/内挂字幕）
-    5. 字幕网站推荐：
-         www.subom.net
-         www.subhd.com
-    6. mkv分离出的音频轨为mka，字幕为mks
-         mka作为mkv的外挂文件时，mka内可以封装多条音频轨和多个字幕
-         根据上一条，下载BDrip时留意资源介绍，一般有comment track评论音轨的都会封装在同名mka里，可选择性下载以减少占用空间
-    7. mkv分离/封装软件：MKVToolnix
-        
-SP.1  优秀 BDRip/新番 压制者/组/字幕组 推荐
-（待补全，最近更新2019.10.27）
-资料来源：
-VCB-Studio网站：https://vcb-s.com
-ANK-Raws，LittleBakas!网站：https://www.mahou-shoujo.moe
-U2论坛-闲聊各个压制组相关：https://u2.dmhy.org/forums.php?action=viewtopic&amp;topicid=11263
-（说是待补全其实是补不全的233）
-    1. 中文BD压制御三家
-         **mawen1250**
-            雯姐，天才压片少女，出道即顶级，公开了很多脚本，并且在 nmm 论坛著有大量压制教学贴，对大多数中文压制者而言都是直接或间接的带路人
-            以下内容引自VCB编年史：
-             顺道可以提一下 mawen1250 的风格，毕竟 VCB-S 的技术，我多半是学自雯姐，但是风格上不尽相同。如果说 VCB-S 是攻无不克的双刀流，那么 mawen1250 的做法则有些像攻守自如的神圣剑——攻击力当然也很强，但是防御力尤其惊人。mawen 的 avs 更注重利用 CSMod16 的框架，对纹理细节做锐化，补偿压缩中的损失，造成的后果，就是容易在有损编码中被破坏的细节，因为被强化而难以被编码器抹去，甚至在成品中更加明显，画面的锐度和观感更好。这种理解远超那些“不降噪至上，细节万岁”的国外组。这就是为啥 mawen 的作品光看 x264 参数不觉得画质多好，然而实际观看效果和细节分析，往往比俄罗斯的 raw 组更好。这是理念的先进。
-            **总结**：见到mawen1250的tag，直接收就对了。尤其是Key社相关作品，不要问，闷头下载
-         **ANK-Raws**
-            主刀：**小夜**（**saya**）
-            自2018年6月起，ANK-Raws不会在公网发片（不过之后还是和其他Raw组/字幕组合作发过几次）
-            风格上，ANK-Raws比前两家的线条处理力度更大一些，有着标志性的线条加深处理，噪点基本不保留
-            由于产量大，并不是每部片子都慢工出细活，偶尔也会翻车，但小夜的技术尤其体现在一些见功力的片子上，比如臭名昭著的 Air 的BD
-            以下内容引自VCB编年史：
-            评价一个raw组好坏完全没意义，以ANK-Raws为例，最早的小夜是低参裸压的渣渣，后来的小夜就是滥用降噪滤镜的渣渣，现在的小夜是在玩舰娘的高手，但是无论什么时候，小夜都是萝莉控。
-            ~~saya is ∞ lolicon~~
-         **VCB-Studio**
-            ~~Various Crushing Bugs Studio~~
-            ~~LP：来人给我拖出去斩了~~
-            一代目队长：**LittlePox**
-            现任队长：**七条天空**
-            前身为百度显卡吧影音工作室（早就没关系了，这也是**V**ideo**C**ard**B**ar缩写的由来），国内现存规模最大，业界唯一组织化、流水线化产出的压制组，自2015年大力推动HEVC编码实用化。
-            发布的BDRip内容齐全，产量可观，品质上乘，风格跟mawen大体一致
-            所有资源公网都没断种
-                VCB-Studio有自己几十人，近百个BT客户端的分流组_(:3」∠)_其他组望尘莫及
-            VCB-Studio是唯一公开招人的组，举办过大规模的压制课程教学，并且网站主页有许多科普教程
-            以下内容引自VCB编年史：
-            VCB-S 流在 avs 设计上，以 gsmc + nr-deband 为非线条部分基础框架，融入 mask 设计，然后再针对线条部分的瑕疵做针对性修复，必要的时候配合补偿性锐化。VCB-S 流的 avs 设计最精髓的理念，在于 masked gsmc 可以在几乎不破坏细节，不改变画风的前提下，大幅削减画面中无效的高频信息。
-            VCB-S 流在编码参数设计上，x264 时代，基本是 mawen1250 参数的修改。编码效率（以及时间开销）上强化，画质预期上弱化，从而保持小体积风格。x265 时代则是基于自家独立的测试来探究一系列合理的参数。参数高，测试深，对片源针对性强，使得编码效率非常高，这样进一步达到削减体积的目的。通过 avs 和参数的不断强化，VCB-S 在保持小体积风格的前提下，不断地提升 BDRip 的画质定位。
-             如果说 BDRip 中，画质还原度是防守，体积效率是进攻，VCB-S 流就有点像刀剑神域中的双刀流，通过 avs 和参数双重配合来强化攻防。
-            **总结**：硬盘够的收藏党画质党，收就对了。
-            ~~LP大法好.jpg~~
-         **LittleBakas!**
-            创建者：**mawen1250**，**KN**，**虎王**等
-            ~~御三家有四个不是常识吗~~
-            LB研究的黑科技naobu滤镜基于神经网络，画面线条非常清晰锐利，副作用小
-            naobu是在RGB色彩空间下处理的，所以成品保留YUV444p10格式
-            LB压制的《你的名字》4k YUV444版本值得收藏，画质甚至超越官方拉伸的4k日版BD
-    2. 中文BD压制组/个人
-         **philosophy-raws**
-            主刀：**fch1993**（退休）
-            **fch1993**是**mawen1250**亲传弟子之一~~，江湖人称伊“非常壕”~~
-            经常把其他压制组的BDRip拿来remux，并加上过于齐全的周边资源制作**增补版**（笑
-         **动漫国**
-            前主刀：**Holy**（退休）
-         **AI-Raws**
-            主刀为**木神油**，半隐退
-            京阿尼黑历史《仰望天空的少女瞳中的世界》，此片 AI-Raws 用了HDTV特殊片源（也可能是母带rip），能明显看出比BD更好，全网唯一选择
-         **Eggpain-raws**
-            主刀：**Orca**
-            ~~最近去馒头压一些奇怪的东西去了（大雾~~
-            ~~EggPenis是啥我完全不知道~~
-         **Seed-Raws**（退休）
-         **EMTP-Raws**
-            主刀：**sadouxi**
-         **Vmoe**
-            主要制作演唱会视频
-            （其实主业是字幕特效，在字幕特效方面建树颇丰，但压制也不含糊，见到Vmoe的演唱会直接下载就对了
-    3. 国外BD压制组/个人
-         **Henshin**
-            主刀：**Kuramori**（退休，偶尔诈尸）
-            被tp7吹为顶级压制
-         **ANE**
-            主刀：**tp7**（退休）
-            全名Afternoon Nap Empire，午睡王国
-            被Kuramori吹为顶级压制
-         **THORA**
-            主刀：**adenozin**（退休）
-            从某个时间点之后的作品质量优秀
-         **Beatrice-Raws**
-            主刀：**DJATOM**
-            **DJATOM**本人关于**Beatrice-Raws**组员的简介：
-            http://bbs.vcb-s.com/forum.php?mod=viewthread&amp;tid=3957&amp;page=3#pid41148
-         **Yousei-Raws**
-            主刀：**tonik**等（大部分退休）
-            http://bbs.vcb-s.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=3957&amp;pid=41142
-         **NanoAlchemist**
-         **sergey_krs**
-         **ReinForce**
-            裸压
-         **Salender-Raws**
-            ~~加强版Reinforce~~
-    4. 中文新番连载组
-       除了LoliHouse外基本都是字幕组
-         **LoliHouse**
-            17年建组，以推动新番1080p化为目标，可看作简化版VCB-Studio
-            产量很高，十分有性价比，可以作为BDRip的暂时性替代品
-            与很多字幕组经常合作新番，如喵萌奶茶屋，千夏，豌豆，风之圣殿，悠哈璃羽，SweetSub，茉语星梦等
-            一周年纪念时公开了全套压制工具链，压制参数和一些视频处理脚本
-         **雪飘**（**FLsnow**）
-            主刀：**ssnake**等
-         **诸神字幕组**（**Kamigami**）
-            中日双语特色，2013年以后字幕质量优秀
-         **澄空学园**
-         无需多言（
-         **华盟**
-         无需多言（
-         **动漫国**（**DMG**）
-         上面有提到
-            偶尔跟LoliHouse合作
-         **千夏字幕组**（**Airota**）
-            出了不少BDRip
-         **风之圣殿**（**FZSD**）
-            主刀：**tnti**，**小圣**
-            经常实验各种神奇的规格
-         **喵萌奶茶屋**（**Nekomoe kissaten**）
-         **悠哈璃羽字幕社**（**UHA-WINGS**）
-            本体是华南农业大学动漫社下属组织
-         **豌豆字幕组**（**BeanSub**）
-         **茉语星梦**（**MakariHoshiyume**）
-         **DHR动研**
-         **八重樱字幕组**
-         **c.c动漫**
-         **Mabor-Raws**
-            主刀：**咩咩**（尤斯蒂娅）
-            **幻之字幕组**下属压制组
-         **SweetSub**
-    5. 生肉片源组
-         **TV**源（现在基本被淘汰）
-            **Ohy-Raws**
-                一般简称**O**组，日本电视台放送后半小时内就会发布到 nyaa 上，长时间来一直是各字幕组的主要片源
-            **Leopard-Raws**
-                一般简称**L**组，比O组慢一点，体积大一点（但TV源本身质量就不及Web）
-         **Web**源
-            **HorribleSubs**
-                一般简称**H**组，会从各种在线网站扒画面干净的WEB源，内封英文软字幕
-                曾经，H组从CR扒的源都是二压过的，其标志为视频帧率23.81fps。这个问题从2018年开始不复存在。
-            **Erai-Raws**
-                一般简称**E**组，大部分片源跟H组一致，内封多国语言软字幕，但是覆盖面比H组小，速度也慢一些
-                E组花屏概率比H组高一点，热度比较低
-         E组和H组的片源只要互补使用，大体上就能取代O组和L组，成为字幕组的新片源
-    6. 几句闲话（大概）
-       全部引自VCB-Studio网站
-         这世界上没有最优秀的组；给定任何一个番，不存在最优秀的rip（除非只有一部，但是这种情况下这一部是同时处于优秀和渣作叠加的状态）
-         自己没判断力，也不想去判断，转而问别人哪个组做的好的人，你是在浪费自己和他人时间。这好比一个味觉丧失的人问可乐、果汁、牛奶…哪个好喝，然后根据别人的回答心满意足的喝着白开水，甚至是馊水。
-         如果纠结该选哪个组的版本，LP的一个比喻非常形象： 你觉得不同组/BDRip和原盘之间的差距是一只苹果那么大，饥饿的时候，能不能吃到大苹果是很纠结的事情；其实它们只有一只蚂蚁那么大，你非得把它按住了眼睛贴着甚至拿着放大镜才能看清
-         如果你经常在移动设备上看片，或者需要用非编编辑，不要去选择10bit的片子。这种场合下选10bit片子，简直是墙上一寸长一根钉子，你拿头duang duang duang的往上撞。
-    7. 相关链接
-         VCB-Studio网站：https://vcb-s.com
-         VCB-Studio字幕论坛：https://bbs.vcb-s.com
-         ANK-Raws&amp;LittleBakas!网站：https://www.mahou-shoujo.moe
-         澄空学园论坛：https://bbs.sumisora.net
-         诸神字幕组发布站：https://sub.kamigami.org
-         天使动漫论坛：https://www.tsdm.live
-         轻之国度论坛：https://www.lightnovel.cn
-补录
-    字幕
-    1、chs简体中文：Chinese Simplified的缩写。
-    2、cht繁体中文：Chinese Traditional的缩写。
-    
-    1、sc是简体中文字幕，
-    2、tc是繁体中文字幕
-    
-</code></pre>
-
+        <?xml version="1.0" encoding="utf-8"?>
+<opml version="2.0">
+  <head>
+    <title></title>
+    <flavor>dynalist</flavor>
+    <source>https://dynalist.io</source>
+    <ownerName>大海</ownerName>
+    <ownerEmail>2834637197@qq.com</ownerEmail>
+  </head>
+  <body>
+    <outline text="MAD教程第0期（笔记合集）">
+      <outline text="补：各格式对章节标记的支持情况（挖坑于2019.10.20）" colorLabel="5"/>
+      <outline text="更新日志" _note="__最近更新：**2021.5.11**，时隔两年开始大修第0期笔记，补支醉新教程+记笔记，第0.5 1 2期的在路上了0v0__&#10;__~~尝试在支醉更新第3期前彻底消化掉前几期~~__" heading="3">
+        <outline text="2019.9.15  SP.1《优秀压制组字幕组推荐》"/>
+      </outline>
+      <outline text="黄色背景条目为本人根据其他资料对支醉教程相关部分进行的增补/修改，不定期更新" colorLabel="3"/>
+      <outline text="蓝色背景条目为本人私货，不定期更新" colorLabel="5"/>
+      <outline text="一些常见的图片格式（挖坑于2019.1.27）" colorLabel="5"/>
+      <outline text="找资源·格式编码：浅谈视频格式及其编码" heading="1" listStyle="arabic">
+        <outline text="AVI编码建议使用Xvid（采用早期MPEG-4标准），比其他编码的体积小很多"/>
+        <outline text="MP4">
+          <outline text="MPEG-4（MPEG第四部分），Moving Picture Experts Group:动态图像专家组(即该标准的制定者)"/>
+        </outline>
+        <outline text="MP3：MPEG-1 Audio Layer 3（MPEG第一部分第三层）"/>
+        <outline text="H.264" heading="3">
+          <outline text="又名：MPEG-4 Part 10（MPEG第四标准第10部分）"/>
+          <outline text="简称为：MPEG4 P10"/>
+          <outline text="又名：AVC，Advanced Video Coding，高级视频编码（H.264由两个视频专家组合作提出，所以在MPEG里称作H.264，另一组织里称作AVC）"/>
+          <outline text="合体名称：H.264/MPEG-4 AVC"/>
+          <outline text="H.264的FourCC，四字符代码（four character code）(可以理解为该编码的一种算法)：x264(开源)/AVC1/H264(商用)（注意，不带点）"/>
+          <outline text=""/>
+        </outline>
+        <outline text="MPEG家族：" _note="官网：https://mpeg.chiariglione.org" heading="3">
+          <outline text="MPEG-1：VCD标准：常见格式有DAT，MPG"/>
+          <outline text="MPEG-2：DVD标准：VOB格式"/>
+          <outline text="MPEG-3：夭折"/>
+          <outline text="MPEG-4：MP4"/>
+          <outline text="MPEG-7"/>
+          <outline text="MPEG-21"/>
+          <outline text="……"/>
+        </outline>
+        <outline text="Profile，Level，H.264下一般选High5.1"/>
+        <outline text="H.265：HEVC，High Efficiency Video Coding,">
+          <outline text="合体名：HEVC/H.265"/>
+          <outline text=""/>
+        </outline>
+        <outline text="MKV：可以封入16条音轨，字幕轨无限制">
+          <outline text="（MP4也能封装字幕，但不能封装音频轨和视频轨）"/>
+          <outline text=""/>
+        </outline>
+        <outline text="MOV：苹果公司开发，特点是可以带透明通道"/>
+        <outline text="F4V：FLV+H.264，可以直接改后缀名为flv"/>
+        <outline text="HLV：FLV+H.263"/>
+        <outline text="若缺编码，可以下载两个东西：">
+          <outline text="完美解码"/>
+          <outline text="K-litemega codec pack"/>
+          <outline text=""/>
+        </outline>
+      </outline>
+      <outline text="找资源·其他相关：难以归类的各种杂项" heading="1">
+        <outline text="OVA：Original Video Animation"/>
+        <outline text="OAD：Original Video DVD，一般捆绑漫画发售"/>
+        <outline text="（共同点：都没在电视上放）"/>
+        <outline text="算法" heading="3">
+          <outline text="CRC32（Cyclic Redundancy Check/Code）,循环冗余检查/码，32bit，即8位十六进制"/>
+          <outline text="MD5（散列值），128bit"/>
+          <outline text="SHA-1，散列值160位"/>
+          <outline text=""/>
+        </outline>
+        <outline text="种子" heading="3">
+          <outline text="P2P：Peer to Peer"/>
+          <outline text="ed2k：eDonkey2000，电驴"/>
+          <outline text="ed2k下载地址形式：ed2k://|file|&lt;文件名称&gt;|&lt;文件大小&gt;|&lt;文件哈希值&gt;|/"/>
+          <outline text="BT下载地址形式：magnet:?xt=urn:btih:hash值（xt:exact topic）（urn：Uniform Resource Name）（btih: BitTorrent Info Hash）（哈希值一般40位）"/>
+          <outline text="类似的：md5:md5值；ed2k:eD2khash值；sha1:SHA-1 hash值"/>
+          <outline text="磁链和种子文件互转：btspread"/>
+        </outline>
+        <outline text="大佬们推荐的种子（磁链）下载器列表" _note="（数了数几十个pt站巨佬的客户端标识后统计出来的&#10;（待补全&#10;（排名分先后" colorLabel="5">
+          <outline text="qBittorrent" _note="（开源，免费无广告&#10;（还有一个enhanced版本，专治吸血雷"/>
+          <outline text="μtorrent"/>
+          <outline text="rtorrent"/>
+          <outline text="Transmission"/>
+          <outline text="FDM"/>
+          <outline text="**例外**">
+            <outline text="迅雷：在试过上述客户端并且添加许多tracker之后仍无效，万策尽的时候可以试一下，但强烈建议不要作为主要下载器"/>
+          </outline>
+          <outline text="附：[个人随便找的一些能用的tracker](https://dynalist.io/d/y6qtODDT3Lw3uTgCpkO1y_qI)（2019年初亲测能用）"/>
+        </outline>
+      </outline>
+      <outline text="找资源·生肉之旅：各片源版本及其异同" heading="1">
+        <outline text="名词" _note="找资源时，番剧名后面冗长的一大串英文+数字信息" heading="3">
+          <outline text="raw：生肉，无字幕"/>
+          <outline text="BD：Blue-ray Disk，蓝光盘"/>
+          <outline text="Rip：“碟片→硬盘”这一过程；“原盘→压制”" _note="滥用：也指对别人压制过的进行再压制"/>
+          <outline text="caption：字幕"/>
+          <outline text="Vol.：Volume，分卷"/>
+          <outline text="BIG-5：台湾香港地区通行的繁体字编码方案"/>
+          <outline text="GB：国标">
+            <outline text="GB2312：相当于简体标准字库"/>
+          </outline>
+          <outline text="YUV：颜色编码方案"/>
+          <outline text="MX：Tokyo MX，电视台播出的TV版片源"/>
+          <outline text="10bit：位深，表示图像的色彩采样率，与“色深”的概念不同"/>
+          <outline text="其他不认识的英文单词：多半是压制组/字幕组名字，笔记最后一部分有提及" colorLabel="3"/>
+        </outline>
+        <outline text="片源" heading="3" listStyle="arabic">
+          <outline text="主要分为三类：TV，DVD，BD"/>
+          <outline text="近几年网络配信开始普及，使用网络平台发布的视频进行压制叫webRip，常见于现在大多数新番字幕/压制组的发布，收藏价值小于BDrip（详见SP.1《优秀压制组字幕组推荐》）" colorLabel="5"/>
+          <outline text="TV版：画面会出现台标，时间等">
+            <outline text="关于TV画面上的“保护视力”字幕：“3D龙事件”">
+              <outline text="易诱发癫痫的条件：暗屋，大视角(大屏幕或靠太近)，高亮度"/>
+              <outline text="相关视频：“伦敦奥运会宣传片引发癫痫叫停”，“暮光之城：破晓”"/>
+            </outline>
+          </outline>
+          <outline text="TV版有时会出现圣光/暗牧（显示赞助商的免费电视台），收费电视台一般无和谐"/>
+          <outline text="DVD：一般老片源才要去找DVD">
+            <outline text="例外，比如2018年10月番《书店里的骷髅店员本田》就只发售DVD不卖BD~~ 残念跌丝袜 ~~，顺便安利一下这部画风清奇的番" colorLabel="5"/>
+          </outline>
+          <outline text="BD：">
+            <outline text="画质最高"/>
+            <outline text="可能会有内容修正"/>
+            <outline text="一般无圣光暗牧"/>
+            <outline text="附特典，评论音轨"/>
+            <outline text="BD通常每月发售一卷，每卷含几集到十几集不等"/>
+          </outline>
+          <outline text="BDMV：蓝光原盘，目录结构见下"/>
+          <outline text="BDremux：使用BDMV的视频流，音频流进行混流得到，所以和BDMV的画质/音质一样，但只有正片，无花絮等杂项" colorLabel="3"/>
+          <outline text="ISO：DVD的镜像文件（用虚拟光驱加载，或解压软件解压）"/>
+          <outline text="アニメ：anime，特指日本动画"/>
+          <outline text="BD-Box，全集">
+            <outline text="一般老番出BD直接出全集"/>
+          </outline>
+          <outline text="BDMV目录结构：" _note="包含两个子目录：**BDMV**和**CERTIFICATE**" heading="3" colorLabel="3">
+            <outline text="**BDMV**文件夹" listStyle="arabic">
+              <outline text="**STREAM**文件夹：蓝光视频">
+                <outline text="**m2ts**文件">
+                  <outline text="一般来说，m2ts后缀就是蓝光视频文件"/>
+                  <outline text="可直接播放"/>
+                  <outline text="有些不能播放的，多是菜单按钮等信息"/>
+                  <outline text="非编软件一般可以直接导入（常见的还有ts格式）"/>
+                </outline>
+              </outline>
+              <outline text="**PLAYLIST**文件夹">
+                <outline text="**mpls**（mediaplaylist）文件">
+                  <outline text="是蓝光的播放列表信息"/>
+                  <outline text="内有一个或多个播放项目(playitem)"/>
+                  <outline text="多半可以被播放器直接播放"/>
+                  <outline text="储存有蓝光的章节信息，可以在播放器中被显示"/>
+                </outline>
+              </outline>
+              <outline text="**CLIPINF**文件夹">
+                <outline text="**clpi**（clip-info）文件">
+                  <outline text="存储有视频信息：">
+                    <outline text="编码方式"/>
+                    <outline text="视频长度"/>
+                    <outline text="音轨数量"/>
+                    <outline text="其他属性和时间信息"/>
+                  </outline>
+                  <outline text="每一个视频流（m2ts）文件必须对应一个clpi文件"/>
+                </outline>
+              </outline>
+              <outline text="**META**文件夹" _note="（meta-information元信息）">
+                <outline text="**DL**文件夹">
+                  <outline text="**xml**文件：记录logo相关信息"/>
+                  <outline text="图片：蓝光的logo"/>
+                  <outline text="但由于是在电脑上放，所以上述这两种文件没用"/>
+                </outline>
+              </outline>
+              <outline text="**index.bdmv**：存储原盘目录信息"/>
+              <outline text="**movieobject.bdmv**：存储播放命令">
+                <outline text="包含一个可执行的导航命令程序"/>
+              </outline>
+            </outline>
+            <outline text="**CERTIFICATE**文件夹">
+              <outline text="**id.bdmv**：正版证明"/>
+            </outline>
+          </outline>
+          <outline text="スペシャル：Special，即SP"/>
+          <outline text="特典：附加内容，图片，声音，视频">
+            <outline text="可能是见面会，访谈录，NCOP，NCED等其他项目"/>
+          </outline>
+          <outline text="NCOP/ED：无“制作，监督，声优”等字幕">
+            <outline text="NC">
+              <outline text="Non-Credit Opening/Ending"/>
+              <outline text="ノンクレジットオープニング，ノンクレジットエンディング"/>
+              <outline text="无字片头/片尾（“字”指人员名单）"/>
+              <outline text="staff：制作人员"/>
+              <outline text="credit：参与人员"/>
+            </outline>
+            <outline text="去国外网站搜NCOP/ED时还要搜“creditless”。"/>
+            <outline text="再搜不到只能去YouTube的时候搜“textless”。"/>
+            <outline text="有些视频名字里有“ノンテロップ”（Non Telop，telop：television opaque projector的缩略，大意指图片，字幕等）"/>
+            <outline text="NCOP Vol.1一般第一卷就有了。"/>
+          </outline>
+          <outline text="ep：Episode，集"/>
+          <outline text="重制版：大部分情况下说的都不是重新制作，而是数码重制（若重制后播出，则是数码重映）(Digital remaster(ed))"/>
+          <outline text="导演剪辑版（Director&apos;s Cut，ディレクターズ・カット）">
+            <outline text="相当于加长版，多了一些内容"/>
+            <outline text="导演和制片人意见不合时产生"/>
+            <outline text="制片人偏商业性，导演偏艺术性"/>
+          </outline>
+          <outline text="OA：On The Air，电视上播出的版本"/>
+          <outline text="Renewal版（Renew版）：相当于数码重制+导演剪辑"/>
+          <outline text="Special Edition：特殊版本"/>
+        </outline>
+        <outline text="EXTRA:" heading="3" listStyle="arabic">
+          <outline text="“3D龙”事件"/>
+          <outline text="PS3游戏《凉宫春日的追忆》的特典，有God Knows演唱会3D版（av16931681）"/>
+          <outline text="俺妹,每个OP都不一样"/>
+          <outline text="家有色邻，OP区别只在一开始的画面"/>
+          <outline text="2011版全职猎人，只有NCOP3和ED2"/>
+          <outline text="好想告诉你，DVD有NCOP/ED，BD没有"/>
+          <outline text="有些番一开始的OP/ED制作就融入了Credit。例：A Channel，黑礁，星际牛仔没有NC"/>
+          <outline text="死神每个OP的分镜，版式设计和配色都非常出彩（OP13没有NC）"/>
+          <outline text="火影OP9没有NC"/>
+          <outline text="穿透幻影的太阳，DVD才有NCOP/ED"/>
+          <outline text="铃音，DVD和BD版NCOP不一样：DVD版（和TV版）前面有一段话"/>
+          <outline text="百花缭乱 NCOP/ED有墨汁版和无墨汁版"/>
+          <outline text="名侦探柯南 NCOP20/21右下角水印"/>
+          <outline text="伊克西翁传说DT 的OP带有歌词字幕"/>
+          <outline text="海贼王 富士电视台重制版本（Special Edition）ep9，画质提升但是上下画面被砍" _note=" "/>
+        </outline>
+      </outline>
+      <outline text="找资源·视频基础：浅谈视频各常见名词" heading="1" listStyle="arabic">
+        <outline text="像素" heading="3" colorLabel="3">
+          <outline text="像素(pixel)全称图像元素，pixel element，pix是picture的俚语，故简化为pixel，作单位时写作px。"/>
+          <outline text="垂直像素点有720行叫做720p，1080p，2160p同理，没有规定横向像素点数量"/>
+          <outline text="长宽比：aspect ratio">
+            <outline text="16:9，4:3是电视行业的标准"/>
+            <outline text="带小数点的1.78:1，1.33:1是电影行业的称呼方式"/>
+          </outline>
+          <outline text="长宽比的来历见视频P1 33:23"/>
+          <outline text="摄像机 ≠ 摄影机" _note="前者电子磁记录，后者光化学记录"/>
+          <outline text="4:3屏幕播放其他比例的视频时的放大方式" listStyle="arabic">
+            <outline text="Pan&amp;Scan：直接按短边等比例放大塞满画面，这会导致长边被裁切"/>
+            <outline text="Letterbox 信箱：上下加黑边，但现在黑边作为电影电视争斗产物也改变了大众审美，有黑边才有电影感" _note="现在习惯用“黑边”了"/>
+            <outline text="Pillarbox 邮筒：左右加黑边"/>
+            <outline text="Windowbox 窗盒：四周都有黑边"/>
+          </outline>
+          <outline text="**SD**（Standard Definition）（480p）标清：640*480"/>
+          <outline text="**HD**（High Definition）（720p）高清：1280*720"/>
+          <outline text="**FHD**（Full HD）（1080p）全高清：1920*1080"/>
+          <outline text="**QHD**（Quad HD）（2K）（1440p）：2560*1440" _note="分辨率为HD（1280*720）的四倍（Quad）&#10;又名：**WQHD**（Wide Quad HD）"/>
+          <outline text="**4K UHD**（Ultra HD）超高清：3840*2160" _note="又名：**QFHD** (Quad Full HD)"/>
+          <outline text="**8K UHD**：7680*4320"/>
+          <outline text="其他（也许会见到的）分辨率" _note="参考资料：https://en.wikipedia.org/wiki/Graphics_display_resolution" colorLabel="5">
+            <outline text="计算机图形">
+              <outline text="**HD+**：1600*900"/>
+              <outline text="**DCI 4K** / **Cinema 4K**：4096*2160"/>
+              <outline text="**5K** / **UHD+**：5120*2880"/>
+            </outline>
+            <outline text="数字电视标准">
+              <outline text="**VCD**（Video CD）：&#10;352*240（NTSC）&#10;352*288（PAL）"/>
+              <outline text="**DVD**：&#10;720*480（NTSC）&#10;720*576（PAL）"/>
+            </outline>
+          </outline>
+          <outline text="**补充**">
+            <outline text="高分辨率的“K”数一般看水平分辨率的近似，比如3840和4096都算4k，5120就是5k，6k等以此类推" _note="~~那1080p = 1920*1080 ≈ 2k了（大雾~~"/>
+          </outline>
+        </outline>
+        <outline text="HDTV标准" heading="3">
+          <outline text="关于HDTV标准16:9的由来（该标准从1972年开始制定，1983年终于制定完成）：">
+            <outline text="TV：1.33:1"/>
+            <outline text="欧洲宽银幕：1.66:1"/>
+            <outline text="英美宽银幕：1.85:1"/>
+            <outline text="70mm胶片：2.2:1"/>
+            <outline text="CinemaScope：2.35:1"/>
+          </outline>
+          <outline text="HDTV标准即是将这些主流标准叠加，最内侧的框和最外侧的框（比例相等）为16:9，1.78:1。"/>
+          <outline text="16:10是最接近美学上的“黄金分割”"/>
+          <outline text="16:9是最接近成本上的“黄金分割”"/>
+          <outline text=""/>
+        </outline>
+        <outline text="帧" heading="3">
+          <outline text="帧：frame，画框，边框">
+            <outline text="随胶片的出现而产生，每一格就是一帧"/>
+            <outline text="静态画面变成动态影像，最低限制是每秒播放8格，比较流畅需要达到12."/>
+          </outline>
+          <outline text="帧速率简称帧率，**F**rame **P**er **S**econd，每秒钟一帧出现的频率"/>
+          <outline text="视频的帧率模式有两种，CFR和VFR" colorLabel="5">
+            <outline text="**C**onstant **F**rame **R**ate，恒定帧率，顾名思义，全程帧率不变，这也是现在绝大多数视频采用的模式"/>
+            <outline text="**V**ariable **F**rame **R**ate，可变帧率，在视频的不同时间点可能会有不同的帧率。由于目前并不能带来多大的视频压缩率提升，并且其对兼容性有较高要求，VFR视频极其稀少"/>
+          </outline>
+          <outline text="播放电影时常用叶片快门来达到闪烁效果。叶片快门内是类似于马耳他十字芯的结构"/>
+          <outline text="视觉暂留现象：由于视神经的惰性，人眼接收光脉冲时，出现，渐上，持平，缓慢消失(0.1~0.4s)"/>
+          <outline text="人眼能看出在动：">
+            <outline text="临界频率 8Hz"/>
+            <outline text="比较流畅 12Hz"/>
+          </outline>
+          <outline text="人眼觉得不闪：">
+            <outline text="临界闪烁频率为 45.8Hz"/>
+            <outline text="人眼视觉极限 58Hz"/>
+            <outline text="随着显示器亮度的增加，这一极限将会增加至 60-70Hz"/>
+          </outline>
+          <outline text="动画张数相关" colorLabel="3">
+            <outline text="某些动画或某些镜头是按一拍一画的，即每帧都有一幅画面（区别于一拍二或一拍三，即两/三帧一张画）。中间画的张数多了，所以会感觉流畅。此时可以称为“高张数”"/>
+            <outline text="为平衡成本和流畅度，现在绝大多数动画普遍采用一拍二或一拍三，此时张数较低，会出现视频的每两/三帧为同一画面的情况。但此时的视频帧数是不变的，看起来卡顿是因为动画作画的张数低，而不是视频的帧数低"/>
+            <outline text="某获得BC2013第二名的作品 **Into Rhe Labyrinth**（物语节奏型AMV），其流畅的画面为使用AE插件进行补帧得到的效果，此时可以称之为“高帧”"/>
+            <outline text="想了解更多动画张数相关知识可以看[Anitama的这期视频：av49484471](https://www.bilibili.com/video/av49484471)"/>
+          </outline>
+          <outline text="相同FPS下 为什么游戏看起来比电影电视要卡" colorLabel="3" listStyle="arabic">
+            <outline text="游戏是显卡实时渲染，渲染不同帧所需时间不等"/>
+            <outline text="游戏没有开动态模糊，导致相邻帧之间的过渡生硬，通过人眼视觉暂留现象放大。"/>
+            <outline text="即使开了动态模糊，那也只是通过对显卡渲染出的一张图片进行后处理来逼近电影的视觉效果，信息量相比渲染前的只减不增，远远比不过拍摄电影的真实感"/>
+          </outline>
+        </outline>
+        <outline text="场" heading="3">
+          <outline text="电视制式主要有三种，NTSC，PAL，SECAM。NTSC的交流电频率是60Hz，PAL是50Hz" _note="NTSC：**N**ational **T**elevision **S**tandards **C**ommittee (美国)国家电视标准委员会&#10;PAL：**P**hase **A**lternating **L**ine 逐行倒相"/>
+          <outline text="扫描方式有隔行扫描（i，interlaced）和逐行扫描（p，progressive）。逐行扫描是现在最普遍的显示方式，即为“720p”中的“p”，“i”同理。"/>
+          <outline text="P制，一幅画面扫两次，这两i的画面被称为“场”，50/2=25fps"/>
+          <outline text="N制，一幅画面扫两次，为了保证彩色而降频，60场变成60-60*1/1000=59.94场=29.97fps"/>
+          <outline text="隔行扫描的i除了能加在垂直分辨率上（1080i）和场频上（50i）还能加到电视线上，比如525i，625i"/>
+          <outline text="隔行扫描中，如果相邻的场在前期拍摄时就是交错的，无法完美地合在一起，那么当用逐行扫描的显示器直接播放隔行扫描的视频会出现拉丝，解决办法是去交错（deinterlacing）" colorLabel="3">
+            <outline text="去交错的算法有很多，速度和质量上各有优劣，但都不是无损的"/>
+          </outline>
+          <outline text="若视频在拍摄时是逐行扫描，之后经过3:2 pull down等方法转换成了隔行扫描，则可通过反交错（Inverse Telecine，IVTC）将隔行扫描视频几乎无损的还原成逐行扫描" colorLabel="3">
+            <outline text="现在显示器/播放器一般自带反交错功能，但有些视频，比如3-2pull down，还是需要自己手动反交错）"/>
+          </outline>
+          <outline text="注：简单的去交错及反交错可以用免费视频压制软件“Handbrake”处理，而较复杂的则常用MeGUI + AviSynth/VapourSynth脚本，有相关需求者可以点下这个方向的技能点。推荐国内压制技术论坛：nmm-hd" colorLabel="5"/>
+          <outline text="N制对电影的匹配：3-2Pull Down/3:2下位变换/下拉变换/帧频转换：四帧共分为8个场（1奇1偶  2奇2偶  3奇3偶  4奇4偶），在变换的时候变成：1奇1偶  2奇2偶  2奇3偶  3奇4偶  4奇4偶.其中第三，四帧会出现交错鬼影（interlacing artifacts）(同时出现两个画面)"/>
+          <outline text="P制对电影的匹配：由于P制25fps，电影24，P制就把电影中一秒内的某一帧重复一次。">
+            <outline text="N制24fps电影转换为P制25fps时，若先看到13帧正常图像，接着12帧交错图像，这是Euro pulldown" colorLabel="5"/>
+          </outline>
+          <outline text="为了确保彩色信号而降频的N制 加上 3-2Pull Down：4/5==x/29.97，x=23.976"/>
+          <outline text="像素的形状是正方形，那时P制768*576，N制640*480，现在统一了，但出现了1:1.067（P制）和1:0.889（N制）。">
+            <outline text="PS：支醉视频这里放的那个长方形像素长宽比不是1:1.067，更像是1:1.67_(:3」∠)_" _note="__~~支醉：夸张手法，夸张手法懂不懂，一切为演出效果服务.gif~~__"/>
+          </outline>
+        </outline>
+        <outline text="码率" heading="3">
+          <outline text="码率，意为每秒的数据量" _note="又叫：Bit Rate 比特率 / Data Rate 数据率">
+            <outline text="bit来源 Binary digit，二进制数字"/>
+            <outline text="比特率：单位时间内传输的数据位数。1个位数是1bit，8bit是1字节（Byte）"/>
+            <outline text="字节：一个英文字母/数字为1字节，一个汉字2字节"/>
+          </outline>
+          <outline text="对于数据来说，1024字节为1KB，1024KB为1MB，1024MB=1GB，以此类推。但在存储介质的制造中，容量往往按照1000来换算，即：&#10;我们购买的1TB硬盘，其容量为1,000,000,000,000 Byte，按照1:1024换算最终约为931.32GB"/>
+          <outline text="码率越大，数据流越大，文件体积变大，音画质一般更好，网络缓冲更慢..."/>
+          <outline text="常用单位" _note="注意大小写，可以这样记：1大写=8小写（1MB/s = 8Mbps）" colorLabel="3">
+            <outline text="Mbps 和 Kbps ，常表示带宽" _note="Mbps (megabits per second) 兆/秒，Kbps (kilobits per second)"/>
+            <outline text="KB/s：千字节每秒，常表示速率"/>
+          </outline>
+          <outline text="两种主要形式">
+            <outline text="CBR：**C**onstant **B**it **R**ate，静态/固定码率"/>
+            <outline text="VBR：**V**ariable **B**it **R**ate，动态/可变码率"/>
+          </outline>
+        </outline>
+        <outline text="其他" heading="3">
+          <outline text="a1080：1440:1080，在播放的时候拉伸为1440*1.333:1080，16:9。"/>
+          <outline text="后黑：视频后面加一段黑屏，降低平均码率以保证画质"/>
+          <outline text="文件大小≈总码率*时长/8（1字节Byte=8比特bit）"/>
+          <outline text=""/>
+        </outline>
+        <outline text="色深/位深" _note="（这个深坑还没填完）&#10;增补内容来源于 英文维基百科 / AE官方文档  / VCB-Studio教程，不保证准确性，以后阅读相关专业文献再做增补" heading="3" colorLabel="3">
+          <outline text="注意。。。" heading="3">
+            <outline text="支醉在这里貌似把位深和色深讲混了23333，我稍微修改下"/>
+            <outline text="补充……不仅仅是支醉，各路百科（包括中文维基），甚至中文圈的大部分都有种把它和其他概念混为一谈的感觉…"/>
+            <outline text="补充×2……“色深/位深”与“色彩位数”两节未修正完，最后更新：2019.4.1"/>
+            <outline text="补充×3，其实没什么，只是个中文翻译的混乱，用英文能100%避免这个问题"/>
+          </outline>
+          <outline text="在计算机图形方面，色深（Color depth）和位深（Bit depth）一般指的是同一种东西：单独色彩通道的深度（也称为bpc，bit per channel，每通道精度）" colorLabel="5"/>
+          <outline text="由2的指数表示，比如：8bit, 10bit, 16bit，意味着一个通道占用8/10/16bit，有256/1024/65536种颜色"/>
+          <outline text="资源文件名中的Hi10p=10bit（profile=high）；Hi8p同理；Ma10p同理（profile=main）"/>
+          <outline text="关于支醉视频里提到的小电视飞天镜头8bit颜色过渡不自然，其实有另一种解决方法：使用抖动算法向视频内添加噪点。这样不仅可以达到媲美转换成10bit的色带抑制效果，还会保留8bit的兼容性" colorLabel="5">
+            <outline text="另外此处视频画面（p1，66:16）左边那个所谓的“8bit”个人猜测是为了说明这个意思而刻意夸大了（左边画面的色深应该只有5,6bit），实际8bit不可能有如此严重的色带。要知道B站所有视频都是8bit YUV，而在8bit YUV里是几乎看不到8bit RGB和16bit RGB的区别的（YUV和RGB的相关知识见下文“色彩空间”）"/>
+          </outline>
+          <outline text="EXTRA：" colorLabel="5">
+            <outline text="目前AE可以使用最高32bpc浮点值的高动态范围颜色（high dynamic range color）"/>
+            <outline text="支醉在视频里提到“换成32bit之后就面目全非了”之后紧接着说到“32位真彩色”（p1，66:22）其实是有一定误导的：小电视换成32bit应该是指把色深换成32位浮点后，当时的AE可能不支持。但后面说的“32位真彩色”指的应该是下面这条，“色彩位数”"/>
+          </outline>
+        </outline>
+        <outline text="色彩位数" _note="（这个深坑还没填完）&#10;增补内容来源于 英文维基百科 / AE官方文档 / VCB-Studio教程，不保证准确性，以后阅读相关专业文献再做增补" heading="3" colorLabel="3">
+          <outline text="也称作每像素精度，bit per pixel，bpp" colorLabel="5"/>
+          <outline text="现在通常用于表示色彩空间的精度：比如液晶显示屏，以及RGB或YUV编码的视频">
+            <outline text="RGB16：早期windows“16色”，R/G/B通道分别为5/6/5bit"/>
+            <outline text="RGB24：“真彩色”，RGB各8bit"/>
+            <outline text="RGB32：“真彩色”，除了RGB各8bit，还有8bit是透明通道（Alpha channel）"/>
+            <outline text="RGB48：“全彩色”，RGB各16bit"/>
+          </outline>
+          <outline text="EXTRA：" colorLabel="3">
+            <outline text="PNG" heading="3">
+              <outline text="便携式网络图形格式Portable Network Graphics，支持透明度"/>
+              <outline text="PNG-8：使用索引颜色（Indexed color）">
+                <outline text="在生成图片时计算机会筛选出至多256种RGB24颜色以及8bit透明度，并存进调色板（palette）中，用于整个图像的构建"/>
+                <outline text="（挖坑于2019.3.31，PNG-8有两种模式，分别是indexed color和direct color，但平时见到的基本都是索引颜色模式）"/>
+              </outline>
+              <outline text="PNG-24：RGB各8bit">
+                <outline text="PNG-24没有透明通道"/>
+                <outline text="Adobe的位图处理软件PhotoShop支持带透明通道的PNG-24，但实际上这是PNG-32"/>
+              </outline>
+              <outline text="PNG-32，有RGBA四个8bit通道"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="色彩空间" _note="（这个深坑还没填完，最后更新2019.3.31）&#10;增补内容来源于 英文维基百科 / Adobe官方文档 / VCB-Studio教程，不保证准确性，以后阅读相关专业文献再做增补&#10;https://blog.csdn.net/tanningzhong/article/details/76690694" heading="3" colorLabel="3">
+          <outline text="Color space，"/>
+          <outline text="RGB" heading="3">
+            <outline text=""/>
+          </outline>
+          <outline text="YUV" heading="3">
+            <outline text="Y为亮度信号"/>
+            <outline text="U&amp;V：色差信号">
+              <outline text="U=B(蓝)-Y(黄)，记作chorma blue，Cb，蓝色色度"/>
+              <outline text="V=R(红)-Y(黄)，chorma red，Cr，红色色度"/>
+            </outline>
+            <outline text="YUV经过缩放和偏移变成YCbCr"/>
+            <outline text="YUV420：Y全采样，U和V各取一个，在水平和垂直方向的两个连续采样点上完成的（其实应该叫411）"/>
+            <outline text=""/>
+          </outline>
+        </outline>
+        <outline text="Extra：" heading="3">
+          <outline text="白熊咖啡厅（ED4，视觉暂留）"/>
+          <outline text="vcb-s搞过一个4k 120fps 10-bit AVC的高清病毒（超炮OP2），对电脑解码能力有信心的可以试着播放"/>
+          <outline text="mad吧精品贴，【重磅教程】60fpsAMV补帧真正的方法【完美破解】"/>
+          <outline text="刀剑神域2 OP1，原稿，短短几秒画了118张画"/>
+          <outline text=""/>
+        </outline>
+      </outline>
+      <outline text="找资源·搜索相关" heading="1" listStyle="arabic">
+        <outline text="（资源站待补全）"/>
+        <outline text="注意有些番的第一季第二季名称不一样，可以进官网查"/>
+        <outline text="batch：合集"/>
+        <outline text="v2v3：修复了两次/三次"/>
+        <outline text="rev：revision，修复版"/>
+        <outline text="jp2文件格式：Jpeg2000"/>
+        <outline text="搜资源时搜不到记得留意评论"/>
+        <outline text="有些番剧有版权问题，可以试试和谐名" heading="3">
+          <outline text="黑子的篮球：影子球员"/>
+          <outline text="死亡笔记：可爱的小册子"/>
+          <outline text="缘分的天空：~~（咳咳咳我什么也不懂）~~"/>
+          <outline text=""/>
+        </outline>
+        <outline text="raw：生肉"/>
+        <outline text="番剧信息" heading="3">
+          <outline text="bangumi"/>
+          <outline text="aniDB"/>
+        </outline>
+      </outline>
+      <outline text="找资源·音频基础：浅谈音频各常见名词" heading="1" listStyle="arabic">
+        <outline text="听阈，烦恼阈，疼痛阈"/>
+        <outline text="声音=基音（音高）+泛音（音色）"/>
+        <outline text="采样频率（sampling frequency）:" heading="3">
+          <outline text="P制：44100=294*50*(6/2)"/>
+          <outline text="N制：44056=245*59.94*(6/2)"/>
+          <outline text="后统一为44100"/>
+          <outline text=""/>
+        </outline>
+        <outline text="关于音质" heading="3" colorLabel="3">
+          <outline text="PCM编码的wav就是无损"/>
+          <outline text="音频编码常用AAC，其中苹果公司的qaac为公认的业界最优AAC编码器（虽然各aac编码器差距较小）"/>
+          <outline text="一些常见音频格式/编码器：（挖坑于2019.1.27，待填坑）" _note="参考资料：https://magiclen.org/acoustics/" colorLabel="5"/>
+        </outline>
+        <outline text="立体声" heading="3">
+          <outline text="2.0，只有两个主音箱"/>
+          <outline text="2.1，比2.0增加了一个低音炮（subwoofer），另外两个叫卫星箱"/>
+          <outline text="4.0/4.1，比2.0/2.1增加了一个前置音箱和后置音箱"/>
+          <outline text="5.1，左前置音箱(L)，右前置音箱(R)，左环绕音箱(LS)，右环绕音箱(RS)，中置音箱(C)，将人声分离"/>
+          <outline text="7.1，比5.1增加了两个后环绕箱"/>
+          <outline text="9.1，比7.1在主音箱上方增加了两个前主箱"/>
+          <outline text="10.2，在5.1的基础上两侧各增加侧向音箱，增加后中置音箱，在上方增加两个音箱，用于还原声场高度信号"/>
+          <outline text="……"/>
+          <outline text="很多音箱/所有耳机都是2.0声道，在播放5.1声道，杜比环绕声或DTS环绕声时可能会出现只能听到L和R两个声道的情况，解决方法是在视频播放器/分离器里设置环绕声的downmix缩混" colorLabel="5"/>
+        </outline>
+        <outline text="off vocal和instrumental的区别：前者一般指电子音，后者乐器" _note=" "/>
+      </outline>
+      <outline text="找资源·字幕相关：认识各类字幕及其他" heading="1" listStyle="arabic">
+        <outline text="CLOSED CAPTION，隐藏字幕（简称CC），美国1993年开始出产的电视机必备功能"/>
+        <outline text="Open Caption，常见于电影，不隐藏"/>
+        <outline text="caption和subtitle的区别：前者主要是原文，后者一般指翻译字幕"/>
+        <outline text="subtitle：分为硬字幕（内嵌字幕），软字幕（外挂/内挂字幕）"/>
+        <outline text="字幕网站推荐：">
+          <outline text="www.subom.net"/>
+          <outline text="www.subhd.com"/>
+        </outline>
+        <outline text="mkv分离出的音频轨为mka，字幕为mks">
+          <outline text="mka作为mkv的外挂文件时，mka内可以封装多条音频轨和多个字幕" colorLabel="5"/>
+          <outline text="根据上一条，下载BDrip时留意资源介绍，一般有comment track评论音轨的都会封装在同名mka里，可选择性下载以减少占用空间" colorLabel="5"/>
+        </outline>
+        <outline text="mkv分离/封装软件：MKVToolnix" _note=" "/>
+      </outline>
+      <outline text="SP.1  优秀 BDRip/新番 压制者/组/字幕组 推荐" _note="（待补全，最近更新2019.10.27）&#10;资料来源：&#10;VCB-Studio网站：https://vcb-s.com&#10;ANK-Raws，LittleBakas!网站：https://www.mahou-shoujo.moe&#10;U2论坛-闲聊各个压制组相关：https://u2.dmhy.org/forums.php?action=viewtopic&amp;topicid=11263&#10;（说是待补全其实是补不全的233）" heading="1" colorLabel="5" listStyle="arabic">
+        <outline text="中文BD压制御三家" heading="3">
+          <outline text="**mawen1250**">
+            <outline text="雯姐，天才压片少女，出道即顶级，公开了很多脚本，并且在 nmm 论坛著有大量压制教学贴，对大多数中文压制者而言都是直接或间接的带路人"/>
+            <outline text="以下内容引自VCB编年史：" _note=" 顺道可以提一下 mawen1250 的风格，毕竟 VCB-S 的技术，我多半是学自雯姐，但是风格上不尽相同。如果说 VCB-S 是攻无不克的双刀流，那么 mawen1250 的做法则有些像攻守自如的神圣剑——攻击力当然也很强，但是防御力尤其惊人。mawen 的 avs 更注重利用 CSMod16 的框架，对纹理细节做锐化，补偿压缩中的损失，造成的后果，就是容易在有损编码中被破坏的细节，因为被强化而难以被编码器抹去，甚至在成品中更加明显，画面的锐度和观感更好。这种理解远超那些“不降噪至上，细节万岁”的国外组。这就是为啥 mawen 的作品光看 x264 参数不觉得画质多好，然而实际观看效果和细节分析，往往比俄罗斯的 raw 组更好。这是理念的先进。"/>
+            <outline text="**总结**：见到mawen1250的tag，直接收就对了。尤其是Key社相关作品，不要问，闷头下载"/>
+          </outline>
+          <outline text="**ANK-Raws**">
+            <outline text="主刀：**小夜**（**saya**）"/>
+            <outline text="自2018年6月起，ANK-Raws不会在公网发片（不过之后还是和其他Raw组/字幕组合作发过几次）"/>
+            <outline text="风格上，ANK-Raws比前两家的线条处理力度更大一些，有着标志性的线条加深处理，噪点基本不保留"/>
+            <outline text="由于产量大，并不是每部片子都慢工出细活，偶尔也会翻车，但小夜的技术尤其体现在一些见功力的片子上，比如臭名昭著的 Air 的BD"/>
+            <outline text="以下内容引自VCB编年史：" _note="评价一个raw组好坏完全没意义，以ANK-Raws为例，最早的小夜是低参裸压的渣渣，后来的小夜就是滥用降噪滤镜的渣渣，现在的小夜是在玩舰娘的高手，但是无论什么时候，小夜都是萝莉控。"/>
+            <outline text="~~saya is ∞ lolicon~~"/>
+          </outline>
+          <outline text="**VCB-Studio**">
+            <outline text="~~Various Crushing Bugs Studio~~" _note="~~LP：来人给我拖出去斩了~~"/>
+            <outline text="一代目队长：**LittlePox**"/>
+            <outline text="现任队长：**七条天空**"/>
+            <outline text="前身为百度显卡吧影音工作室（早就没关系了，这也是**V**ideo**C**ard**B**ar缩写的由来），国内现存规模最大，业界唯一组织化、流水线化产出的压制组，自2015年大力推动HEVC编码实用化。"/>
+            <outline text="发布的BDRip内容齐全，产量可观，品质上乘，风格跟mawen大体一致"/>
+            <outline text="所有资源公网都没断种">
+              <outline text="VCB-Studio有自己几十人，近百个BT客户端的分流组_(:3」∠)_其他组望尘莫及"/>
+            </outline>
+            <outline text="VCB-Studio是唯一公开招人的组，举办过大规模的压制课程教学，并且网站主页有许多科普教程"/>
+            <outline text="以下内容引自VCB编年史：" _note="VCB-S 流在 avs 设计上，以 gsmc + nr-deband 为非线条部分基础框架，融入 mask 设计，然后再针对线条部分的瑕疵做针对性修复，必要的时候配合补偿性锐化。VCB-S 流的 avs 设计最精髓的理念，在于 masked gsmc 可以在几乎不破坏细节，不改变画风的前提下，大幅削减画面中无效的高频信息。&#10;VCB-S 流在编码参数设计上，x264 时代，基本是 mawen1250 参数的修改。编码效率（以及时间开销）上强化，画质预期上弱化，从而保持小体积风格。x265 时代则是基于自家独立的测试来探究一系列合理的参数。参数高，测试深，对片源针对性强，使得编码效率非常高，这样进一步达到削减体积的目的。通过 avs 和参数的不断强化，VCB-S 在保持小体积风格的前提下，不断地提升 BDRip 的画质定位。&#10; 如果说 BDRip 中，画质还原度是防守，体积效率是进攻，VCB-S 流就有点像刀剑神域中的双刀流，通过 avs 和参数双重配合来强化攻防。"/>
+            <outline text="**总结**：硬盘够的收藏党画质党，收就对了。"/>
+            <outline text="~~LP大法好.jpg~~"/>
+          </outline>
+          <outline text="**LittleBakas!**">
+            <outline text="创建者：**mawen1250**，**KN**，**虎王**等"/>
+            <outline text="~~御三家有四个不是常识吗~~"/>
+            <outline text="LB研究的黑科技naobu滤镜基于神经网络，画面线条非常清晰锐利，副作用小"/>
+            <outline text="naobu是在RGB色彩空间下处理的，所以成品保留YUV444p10格式"/>
+            <outline text="LB压制的《你的名字》4k YUV444版本值得收藏，画质甚至超越官方拉伸的4k日版BD"/>
+          </outline>
+        </outline>
+        <outline text="中文BD压制组/个人" heading="3">
+          <outline text="**philosophy-raws**">
+            <outline text="主刀：**fch1993**（退休）"/>
+            <outline text="**fch1993**是**mawen1250**亲传弟子之一~~，江湖人称伊“非常壕”~~"/>
+            <outline text="经常把其他压制组的BDRip拿来remux，并加上过于齐全的周边资源制作**增补版**（笑"/>
+          </outline>
+          <outline text="**动漫国**">
+            <outline text="前主刀：**Holy**（退休）"/>
+          </outline>
+          <outline text="**AI-Raws**">
+            <outline text="主刀为**木神油**，半隐退"/>
+            <outline text="京阿尼黑历史《仰望天空的少女瞳中的世界》，此片 AI-Raws 用了HDTV特殊片源（也可能是母带rip），能明显看出比BD更好，全网唯一选择"/>
+          </outline>
+          <outline text="**Eggpain-raws**">
+            <outline text="主刀：**Orca**"/>
+            <outline text="~~最近去馒头压一些奇怪的东西去了（大雾~~"/>
+            <outline text="~~EggPenis是啥我完全不知道~~"/>
+          </outline>
+          <outline text="**Seed-Raws**（退休）"/>
+          <outline text="**EMTP-Raws**">
+            <outline text="主刀：**sadouxi**"/>
+          </outline>
+          <outline text="**Vmoe**">
+            <outline text="主要制作演唱会视频"/>
+            <outline text="（其实主业是字幕特效，在字幕特效方面建树颇丰，但压制也不含糊，见到Vmoe的演唱会直接下载就对了"/>
+          </outline>
+        </outline>
+        <outline text="国外BD压制组/个人" heading="3">
+          <outline text="**Henshin**">
+            <outline text="主刀：**Kuramori**（退休，偶尔诈尸）"/>
+            <outline text="被tp7吹为顶级压制"/>
+          </outline>
+          <outline text="**ANE**">
+            <outline text="主刀：**tp7**（退休）"/>
+            <outline text="全名Afternoon Nap Empire，午睡王国"/>
+            <outline text="被Kuramori吹为顶级压制"/>
+          </outline>
+          <outline text="**THORA**">
+            <outline text="主刀：**adenozin**（退休）"/>
+            <outline text="从某个时间点之后的作品质量优秀"/>
+          </outline>
+          <outline text="**Beatrice-Raws**">
+            <outline text="主刀：**DJATOM**"/>
+            <outline text="**DJATOM**本人关于**Beatrice-Raws**组员的简介：" _note="http://bbs.vcb-s.com/forum.php?mod=viewthread&amp;tid=3957&amp;page=3#pid41148"/>
+          </outline>
+          <outline text="**Yousei-Raws**">
+            <outline text="主刀：**tonik**等（大部分退休）" _note="http://bbs.vcb-s.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=3957&amp;pid=41142"/>
+          </outline>
+          <outline text="**NanoAlchemist**"/>
+          <outline text="**sergey_krs**"/>
+          <outline text="**ReinForce**">
+            <outline text="裸压"/>
+          </outline>
+          <outline text="**Salender-Raws**">
+            <outline text="~~加强版Reinforce~~"/>
+          </outline>
+        </outline>
+        <outline text="中文新番连载组" _note="除了LoliHouse外基本都是字幕组" heading="3">
+          <outline text="**LoliHouse**">
+            <outline text="17年建组，以推动新番1080p化为目标，可看作简化版VCB-Studio"/>
+            <outline text="产量很高，十分有性价比，可以作为BDRip的暂时性替代品"/>
+            <outline text="与很多字幕组经常合作新番，如喵萌奶茶屋，千夏，豌豆，风之圣殿，悠哈璃羽，SweetSub，茉语星梦等"/>
+            <outline text="一周年纪念时公开了全套压制工具链，压制参数和一些视频处理脚本"/>
+          </outline>
+          <outline text="**雪飘**（**FLsnow**）">
+            <outline text="主刀：**ssnake**等"/>
+          </outline>
+          <outline text="**诸神字幕组**（**Kamigami**）">
+            <outline text="中日双语特色，2013年以后字幕质量优秀"/>
+          </outline>
+          <outline text="**澄空学园**" _note="无需多言（"/>
+          <outline text="**华盟**" _note="无需多言（"/>
+          <outline text="**动漫国**（**DMG**）" _note="上面有提到">
+            <outline text="偶尔跟LoliHouse合作"/>
+          </outline>
+          <outline text="**千夏字幕组**（**Airota**）">
+            <outline text="出了不少BDRip"/>
+          </outline>
+          <outline text="**风之圣殿**（**FZSD**）">
+            <outline text="主刀：**tnti**，**小圣**"/>
+            <outline text="经常实验各种神奇的规格"/>
+          </outline>
+          <outline text="**喵萌奶茶屋**（**Nekomoe kissaten**）"/>
+          <outline text="**悠哈璃羽字幕社**（**UHA-WINGS**）">
+            <outline text="本体是华南农业大学动漫社下属组织"/>
+          </outline>
+          <outline text="**豌豆字幕组**（**BeanSub**）"/>
+          <outline text="**茉语星梦**（**MakariHoshiyume**）"/>
+          <outline text="**DHR动研**"/>
+          <outline text="**八重樱字幕组**"/>
+          <outline text="**c.c动漫**"/>
+          <outline text="**Mabor-Raws**">
+            <outline text="主刀：**咩咩**（尤斯蒂娅）"/>
+            <outline text="**幻之字幕组**下属压制组"/>
+          </outline>
+          <outline text="**SweetSub**"/>
+        </outline>
+        <outline text="生肉片源组" heading="3">
+          <outline text="**TV**源（现在基本被淘汰）">
+            <outline text="**Ohy-Raws**">
+              <outline text="一般简称**O**组，日本电视台放送后半小时内就会发布到 nyaa 上，长时间来一直是各字幕组的主要片源"/>
+            </outline>
+            <outline text="**Leopard-Raws**">
+              <outline text="一般简称**L**组，比O组慢一点，体积大一点（但TV源本身质量就不及Web）"/>
+            </outline>
+          </outline>
+          <outline text="**Web**源">
+            <outline text="**HorribleSubs**">
+              <outline text="一般简称**H**组，会从各种在线网站扒画面干净的WEB源，内封英文软字幕"/>
+              <outline text="曾经，H组从CR扒的源都是二压过的，其标志为视频帧率23.81fps。这个问题从2018年开始不复存在。"/>
+            </outline>
+            <outline text="**Erai-Raws**">
+              <outline text="一般简称**E**组，大部分片源跟H组一致，内封多国语言软字幕，但是覆盖面比H组小，速度也慢一些"/>
+              <outline text="E组花屏概率比H组高一点，热度比较低"/>
+            </outline>
+          </outline>
+          <outline text="E组和H组的片源只要互补使用，大体上就能取代O组和L组，成为字幕组的新片源"/>
+        </outline>
+        <outline text="几句闲话（大概）" _note="全部引自VCB-Studio网站">
+          <outline text="这世界上没有最优秀的组；给定任何一个番，不存在最优秀的rip（除非只有一部，但是这种情况下这一部是同时处于优秀和渣作叠加的状态）"/>
+          <outline text="自己没判断力，也不想去判断，转而问别人哪个组做的好的人，你是在浪费自己和他人时间。这好比一个味觉丧失的人问可乐、果汁、牛奶…哪个好喝，然后根据别人的回答心满意足的喝着白开水，甚至是馊水。"/>
+          <outline text="如果纠结该选哪个组的版本，LP的一个比喻非常形象： 你觉得不同组/BDRip和原盘之间的差距是一只苹果那么大，饥饿的时候，能不能吃到大苹果是很纠结的事情；其实它们只有一只蚂蚁那么大，你非得把它按住了眼睛贴着甚至拿着放大镜才能看清"/>
+          <outline text="如果你经常在移动设备上看片，或者需要用非编编辑，不要去选择10bit的片子。这种场合下选10bit片子，简直是墙上一寸长一根钉子，你拿头duang duang duang的往上撞。"/>
+        </outline>
+        <outline text="相关链接">
+          <outline text="VCB-Studio网站：https://vcb-s.com"/>
+          <outline text="VCB-Studio字幕论坛：https://bbs.vcb-s.com"/>
+          <outline text="ANK-Raws&amp;LittleBakas!网站：https://www.mahou-shoujo.moe"/>
+          <outline text="澄空学园论坛：https://bbs.sumisora.net"/>
+          <outline text="诸神字幕组发布站：https://sub.kamigami.org"/>
+          <outline text="天使动漫论坛：https://www.tsdm.live"/>
+          <outline text="轻之国度论坛：https://www.lightnovel.cn"/>
+        </outline>
+      </outline>
+      <outline text="补录" heading="1">
+        <outline text="字幕" _note="1、chs简体中文：Chinese Simplified的缩写。&#10;2、cht繁体中文：Chinese Traditional的缩写。&#10;&#10;1、sc是简体中文字幕，&#10;2、tc是繁体中文字幕&#10;"/>
+      </outline>
+    </outline>
+  </body>
+</opml>
       
 
       
